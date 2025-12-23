@@ -11,7 +11,7 @@ POPULATION_TIFF = os.path.join(os.path.dirname(__file__), 'data', 'population.ti
 if not os.path.exists(POPULATION_TIFF):
     raise FileNotFoundError(f"Файл {POPULATION_TIFF} не найден!")
 
-@app.route('geocommerce/api/population', methods=['GET'])
+@app.route('/geocommerce/api/population', methods=['GET'])
 def get_population():
     try:
         lat_min = float(request.args.get('lat_min'))
